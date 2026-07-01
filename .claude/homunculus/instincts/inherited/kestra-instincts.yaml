@@ -1,0 +1,318 @@
+# Instincts generated from https://github.com/Sherlock999xxx/kestra
+# Generated: 2026-07-01T14:21:00.933Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: kestra-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Sherlock999xxx/kestra
+---
+
+# Kestra Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: build
+
+## Evidence
+
+- 1 commits analyzed
+- Detected conventional commit pattern
+- Examples: build(deps): bump the npm_and_yarn group across 1 directory with 8 updates
+
+---
+id: kestra-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/Sherlock999xxx/kestra
+---
+
+# Kestra Commit Length
+
+## Action
+
+Write moderate-length commit messages (~74 characters)
+
+## Evidence
+
+- Average commit message length: 74 chars
+- Based on 1 commits
+
+---
+id: kestra-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Sherlock999xxx/kestra
+---
+
+# Kestra Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: kestra-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Sherlock999xxx/kestra
+---
+
+# Kestra Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: kestra-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/Sherlock999xxx/kestra
+---
+
+# Kestra Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: kestra-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/Sherlock999xxx/kestra
+---
+
+# Kestra Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: kestra-instinct-file-naming-camelcase
+trigger: "When creating a new TypeScript file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct File Naming Camelcase
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: kestra-instinct-function-naming-camelcase
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Function Naming Camelcase
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: kestra-instinct-class-naming-pascalcase
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Class Naming Pascalcase
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: kestra-instinct-constant-naming-screaming-snake-case
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Constant Naming Screaming Snake Case
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: kestra-instinct-import-style-relative
+trigger: "When importing modules in TypeScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Import Style Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: kestra-instinct-export-style-named
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Export Style Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: kestra-instinct-git-commit-conventional-build
+trigger: "When committing dependency or build-related changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Git Commit Conventional Build
+
+## Action
+
+Use the conventional commit prefix 'build', e.g., 'build(deps): ...'
+
+## Evidence
+
+- Seen in commit: build(deps): bump the npm_and_yarn group across 1 directory with 8 updates
+- Pattern in commits.prefixes: build
+
+---
+id: kestra-instinct-git-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Git Commit Length
+
+## Action
+
+Keep the commit message concise, around 74 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength: 74
+
+---
+id: kestra-instinct-test-location-separate
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Test Location Separate
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+
+---
+id: kestra-instinct-ui-folder-common
+trigger: "When adding new UI-related code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: Sherlock999xxx/kestra
+---
+
+# Kestra Instinct Ui Folder Common
+
+## Action
+
+Place it under the 'ui' folder or its subfolders
+
+## Evidence
+
+- Pattern in architecture.commonFolders: ui
+
